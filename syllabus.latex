@@ -1,0 +1,37 @@
+\documentclass[10pt,article]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{fontspec}
+\usepackage{parskip}
+\def\tightlist{}
+$if(mainfont)$
+  \setmainfont{$mainfont$}
+$else$
+  \setmainfont{Roboto Light}
+$endif$
+\setmonofont{Source Code Pro}
+\title{$course.num$: $course.title$}
+\author{$course.instructor$\\
+  Office: $contact.office$\\
+  Office hours: $contact.office_hours$\\
+  Mailbox: $contact.mailbox$\\
+  \texttt{$contact.email$}
+}
+\date{$course.time$}
+\makeatletter
+\renewcommand\@seccntformat[1]{}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+$if(toc)$
+ \tableofcontents
+$endif$
+
+$body$
+
+\end{document}

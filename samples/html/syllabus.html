@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+  <title></title>  
+  <!--- Stylesheet stuff for standalone files -->
+  <style>
+  html,body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  h1,h2,h3,h4 {
+    line-height: 1;
+    font-weight: normal;
+  }
+
+  h1 {
+    font-size: 2em; 
+  }
+
+  h1#title {
+    line-height: 0;
+    font-size: 3em;
+  }
+
+  h2#title {
+    font-style: italic;
+    font-size: 2em;
+    line-height: 0.5;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+
+  h4 {
+    font-size: 1.15em;
+    font-weight: 700;
+  }
+
+  a {
+    color: #1b85b8;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+  }
+
+  a:hover {
+    color: #104f6e;
+  }
+
+  .container {
+    display: -webkit-flex;
+    display: flex;
+    width: 700px;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .title {
+    padding: 75px 0px 0px 0px;
+    width: 100%;
+  }
+
+  .head {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .header-left: {
+    width: 250px;
+    margin: auto;
+  }
+
+  .header-right {
+    text-align: right;
+    width: 250px;
+    margin: auto;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+    border-spacing: 0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+  }
+  
+  th, td {
+    padding: 0.5em;
+  }
+
+  tr.header {
+    background-color: #5a5255;
+    color: #fdfdfd;
+  }
+
+  tr.odd {
+    background-color: #c3cb71;
+  }
+
+  tr.even {
+    background-color: #fdfdfd;
+  }
+
+  mark {
+    background-color: #559e83;
+    color: #fdfdfd;
+    padding: 3px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+  }
+
+  code {
+    font-family: 'Source Code Pro', Courier, monospace;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+      <h1 id="title">Markdown 101</h1>
+      <h2 id="title">Course Title</h2>
+    </div>
+    <div class="head">
+      <div class="header-left">
+        <p>Instructor Name</p>
+        <p><code><a href="mailto:instructor.email@institution.edu">instructor.email@institution.edu</a></code></p>
+        <p>Office: English Bldg 303</p>
+      </div>
+      <div class="header-right">
+        <p>English Bldg 232, MWF 11–11:50 </p>
+        <p>Office hours: M 3–4</p>
+        <p>Mailbox: 200</p>
+      </div>
+    </div>
+    <div class="content">
+            <h1 id="section-heading">Section heading</h1>
+<p>You can use <code>monospace text</code> and <a href="#">hyperlinks</a>. You can also <strong>make things bold</strong> or <em>italicize them</em>; on HTML documents you can <mark>highlight things</mark>.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in neque pulvinar, faucibus tortor at, bibendum felis. Aenean pretium urna et scelerisque viverra. In ac ultricies elit. Donec posuere arcu vitae dui rhoncus egestas. Donec nisi erat, convallis eu tempus a, volutpat nec dui. Quisque consequat lacus ac augue convallis, at dictum augue accumsan. Cras fringilla mattis iaculis. Donec hendrerit erat id efficitur malesuada. Sed maximus neque eu venenatis ornare.</p>
+<p>Here is a table:</p>
+<table>
+<caption>Grade breakdown</caption>
+<colgroup>
+<col width="75%" />
+<col width="12%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Assignment</th>
+<th align="left">Due date</th>
+<th align="left">% of grade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Assignment 1</td>
+<td align="left">1/1</td>
+<td align="left">25%</td>
+</tr>
+<tr class="even">
+<td align="left">Assignment 2</td>
+<td align="left">2/2</td>
+<td align="left">25%</td>
+</tr>
+<tr class="odd">
+<td align="left">Assignment 3</td>
+<td align="left">3/3</td>
+<td align="left">25%</td>
+</tr>
+<tr class="even">
+<td align="left">Assignment 4</td>
+<td align="left">4/4</td>
+<td align="left">25%</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: decimal">
+<li><p>Numbered list item</p></li>
+<li><p>Another item</p></li>
+<li><p>The last item</p></li>
+</ol>
+<p>And here is an unordered list:</p>
+<ul>
+<li>item 1</li>
+<li>item 2</li>
+<li>item 3</li>
+</ul>
+<p>Or a block quote:</p>
+<blockquote>
+<p>Nulla mollis, neque a vehicula imperdiet, erat ligula aliquet eros, sit amet mollis nisl nulla non turpis. Quisque nec lacus ullamcorper, laoreet mauris ut, varius nunc. Phasellus et elit sit amet nulla viverra porttitor. Maecenas tempor feugiat nisi, ut commodo diam semper ac. Nam lacus eros, sodales id tellus eget, gravida sodales risus. Proin blandit tristique sapien. Suspendisse potenti. Suspendisse ut consectetur purus. Nullam non dolor vehicula, auctor dui ut, tempus est. Aenean tincidunt scelerisque aliquet. Integer tristique convallis felis, quis placerat justo ultrices at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum gravida auctor.</p>
+</blockquote>
+<h2 id="subheading">Subheading</h2>
+<h3 id="level-3-heading">Level 3 heading</h3>
+<p>Aliquam ullamcorper nibh eu nisl interdum vehicula. Phasellus a dignissim erat. Donec rhoncus euismod felis ut ornare. Morbi rutrum sed urna dapibus convallis. Quisque eget odio nec magna maximus posuere ultricies et nisl. Integer interdum leo sed nulla hendrerit maximus. Sed posuere iaculis convallis. Etiam interdum euismod turpis, sed aliquet eros ullamcorper id. Nunc nunc neque, ultrices sed ex quis, varius molestie quam. Nunc hendrerit magna a dolor lacinia malesuada.</p>
+<h4 id="level-4-heading">Level 4 heading</h4>
+<p>Proin sollicitudin dictum lorem in vestibulum. Ut elementum eros vitae mi viverra tristique. Sed volutpat libero elit, ut volutpat urna faucibus et. Nunc facilisis venenatis tincidunt. Nulla tortor elit, faucibus at accumsan ut, rhoncus ac mauris. Vivamus interdum laoreet elit, ut mollis magna tristique at. Integer facilisis euismod metus, id vulputate odio semper consequat. Aliquam in purus sodales, venenatis elit in, convallis lorem. Nulla facilisi.</p>
+<h1 id="a-new-section">A new section</h1>
+<p>Praesent pretium augue est, sit amet euismod lacus gravida id. Nunc ut felis non dolor aliquet maximus non in metus. Aliquam maximus vitae lorem quis viverra. Nulla rutrum lorem sit amet elit euismod elementum. Proin erat est, rhoncus a gravida nec, blandit non risus. In dui nunc, ultricies sit amet cursus vitae, tincidunt eu lectus. Mauris vel ligula sit amet tellus semper condimentum non eu velit. Praesent id odio scelerisque, vestibulum magna id, vehicula massa. Mauris vitae sollicitudin nulla. Nulla molestie est et ligula rutrum, sit amet pretium libero scelerisque. Nullam dictum ligula non ipsum interdum bibendum. Nam vel dapibus mi. Nunc fermentum mattis massa, maximus lacinia tortor iaculis vel.</p>
+    </div>
+  </div>
+</body>
+</html>
+

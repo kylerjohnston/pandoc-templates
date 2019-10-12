@@ -1,0 +1,37 @@
+\documentclass[10pt,article]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{fontspec}
+\usepackage{parskip}
+\def\tightlist{}
+$if(mainfont)$
+\setmainfont{$mainfont$}
+$else$
+\setmainfont{Roboto Light}
+$endif$
+\setmonofont{Source Code Pro}
+$if(title)$
+\title{$title$}
+$endif$
+$if(course)$
+\author{$course$}
+$endif$
+$if(date)$
+\date{Due: $date$}
+$endif$
+\makeatletter
+\renewcommand\@seccntformat[1]{}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+$if(toc)$
+\tableofcontents
+$endif$
+
+$body$
+
+\end{document}
