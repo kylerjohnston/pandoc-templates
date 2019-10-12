@@ -70,13 +70,6 @@ $endif$
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
-$if(skills)$
-\section{Skills}
-$for(skills)$
-\cvitem{$skills.category$}{$skills.skills$}
-$endfor$
-$endif$
-
 \section{Work Experience}
 $for(experience)$
 \cventry{$experience.years$}{$experience.title$}{$experience.employer$}{$experience.city$}{}{$experience.description${}%
@@ -122,6 +115,12 @@ $for(education)$
 \cventry{$education.years$}{$education.degree$}{$education.institution$}{$education.city$}$if(education.gpa)${\textit{$education.gpa$}}$else${}$endif${$education.description$}  % arguments 3 to 6 can be left empty
 $endfor$
 
+$if(skills)$
+\section{Skills}
+$for(skills)$
+\cvitem{$skills.category$}{$skills.skills$}
+$endfor$
+$endif$
 
 %\section{Languages}
 %\cvitemwithcomment{Language 1}{Skill level}{Comment}
@@ -165,7 +164,7 @@ $if(body)$
 \recipient{$if(recipient)$$recipient$$else$Company Recruitment team$endif$}{$if(company)$$company$\\$endif$$if(address.street)$$address.street$\\$endif$$if(address.city)$$address.city$$endif$}
 \date{\today}
 $if(addressee)$
-\opening{Dear $addressee$,}
+\opening{Hello $addressee$,}
 $else$
 \opening{Hello,}
 $endif$
