@@ -161,7 +161,7 @@ $if(body)$
 \clearpage
 %-----       letter       ---------------------------------------------------------
 % recipient data
-\recipient{$if(recipient)$$recipient$$else$Company Recruitment team$endif$}{$if(company)$$company$\\$endif$$if(address.street)$$address.street$\\$endif$$if(address.city)$$address.city$$endif$}
+\recipient{$if(recipient)$$recipient$$else$$company$ recruitment team$endif$}{$if(company)$$company$\\$endif$$if(address.street)$$address.street$\\$endif$$if(address.city)$$address.city$$endif$}
 \date{\today}
 $if(addressee)$
 \opening{Hello $addressee$,}
