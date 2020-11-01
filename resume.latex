@@ -76,7 +76,7 @@ $for(education)$
 $endfor$
 
 $if(skills)$
-\section{Skills}
+\section{Skills and Keywords}
 $for(skills)$
 \cvitem{$skills.category$}{$skills.skills$}
 $endfor$
@@ -104,14 +104,18 @@ $endfor$
 $endif$
 
 $if(projects)$
-\section{Independent Projects}
+\section{Selected Independent Projects}
 $for(projects)$
-\cventry{$projects.date$}{$projects.url$}{$projects.github$}{}{}{$projects.description${}
-  \begin{itemize}
-      $for(projects.stack)$
-    \item $projects.stack$
-      $endfor$
-\end{itemize}}
+\cventry{$projects.date$}{$projects.url$}{$projects.github$}{}{}{$projects.description$\newline{}%
+$if(projects.achievements)$
+Detailed achievements:%
+\begin{itemize}%
+$for(projects.achievements)$
+\item $projects.achievements$
+$endfor$
+\end{itemize}
+$endif$
+}
 $endfor$
 $endif$
 
