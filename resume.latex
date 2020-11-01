@@ -69,6 +69,18 @@ $endif$
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
+\section{Education}
+$for(education)$
+%\cventry$for(education)${$education$}$endfor${}
+\cventry{$education.years$}{$education.degree$}{$education.institution$}{$education.city$}$if(education.gpa)${\textit{$education.gpa$}}$else${}$endif${$education.description$}  % arguments 3 to 6 can be left empty
+$endfor$
+
+$if(skills)$
+\section{Skills}
+$for(skills)$
+\cvitem{$skills.category$}{$skills.skills$}
+$endfor$
+$endif$
 
 \section{Work Experience}
 $for(experience)$
@@ -107,19 +119,6 @@ $if(publications)$
 \section{Publications and Presentations}
 $for(publications)$
 \cventry{$publications.date$}{$publications.title$}{$publications.publisher$}{$publications.location$}{}{}{}
-$endfor$
-$endif$
-
-\section{Education}
-$for(education)$
-%\cventry$for(education)${$education$}$endfor${}
-\cventry{$education.years$}{$education.degree$}{$education.institution$}{$education.city$}$if(education.gpa)${\textit{$education.gpa$}}$else${}$endif${$education.description$}  % arguments 3 to 6 can be left empty
-$endfor$
-
-$if(skills)$
-\section{Skills}
-$for(skills)$
-\cvitem{$skills.category$}{$skills.skills$}
 $endfor$
 $endif$
 
