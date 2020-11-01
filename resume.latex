@@ -72,7 +72,8 @@ $endif$
 
 \section{Work Experience}
 $for(experience)$
-\cventry{$experience.years$}{$experience.title$}{$experience.employer$}{$experience.city$}{}{$experience.description${}%
+\cventry{$experience.years$}{$experience.title$}{$experience.employer$}{$experience.city$}{}{$experience.description$\newline{}%
+Detailed achievements:%
 $if(experience.achievements)$
 \begin{itemize}%
 $for(experience.achievements)$
